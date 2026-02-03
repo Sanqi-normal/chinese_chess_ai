@@ -46,6 +46,40 @@ pip install -r requirements.txt
 python train.py
 ```
 
+### 从检查点恢复训练
+
+```bash
+python train.py --resume checkpoints/model_iter_10.pth
+```
+
+### 使用自定义配置文件
+
+```bash
+python train.py --config my_config.py --resume checkpoints/model_iter_20.pth
+```
+
+### 指定GPU设备
+
+```bash
+python train.py --gpu 0
+python train.py --gpu 0,1  # 多GPU
+```
+
+### 覆盖训练轮数
+
+```bash
+python train.py --iterations 300 --resume checkpoints/model_iter_50.pth
+```
+
+**命令行参数说明：**
+
+| 参数 | 说明 |
+|------|------|
+| `--resume PATH` | 从检查点恢复训练 |
+| `--config PATH` | 使用自定义配置文件 |
+| `--iterations N` | 覆盖训练轮数 |
+| `--gpu ID` | 指定GPU设备ID |
+
 训练配置（可在 `config.py` 中修改）：
 - `num_iterations`: 训练轮数
 - `games_per_iteration`: 每轮自我对弈局数
