@@ -1,5 +1,7 @@
 # Chinese Chess AI - 中国象棋AI
 
+**尚未完成**
+
 基于 AlphaGo Zero/AlphaZero 算法的中国象棋人工智能程序。
 
 ## 功能特点
